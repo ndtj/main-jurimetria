@@ -52,7 +52,7 @@ listar_turmas_recentes <- function(curso) {
       !stringr::str_detect(Turma, "main-"), !arquivado
     ) %>% 
     dplyr::mutate(
-      Material = paste0("https://curso-r.github.io/", Turma), 
+      Material = paste0("https://ndtj.github.io/", Turma), 
       data = lubridate::make_date(
         stringr::str_sub(Turma, 1, 4), 
         stringr::str_sub(Turma, 5, 6), "01"

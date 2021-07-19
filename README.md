@@ -8,9 +8,9 @@ Repositório principal do curso de Introdução à Jurimetria.
 **Acesse o material completo do curso escolhendo uma das turmas
 abaixo**.
 
-| Turma          | Material                                      | Github                                      |
-|:---------------|:----------------------------------------------|:--------------------------------------------|
-| agosto de 2021 | <https://curso-r.github.io/202108-jurimetria> | <https://github.com/ndtj/202108-jurimetria> |
+| Turma          | Material                                   | Github                                      |
+|:---------------|:-------------------------------------------|:--------------------------------------------|
+| agosto de 2021 | <https://ndtj.github.io/202108-jurimetria> | <https://github.com/ndtj/202108-jurimetria> |
 
 <div class="figure">
 
