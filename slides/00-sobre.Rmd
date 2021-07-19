@@ -1,0 +1,187 @@
+---
+title: "Introdução à Jurimetria"
+subtitle: "<hr/>"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["css/xaringan-themer.css", "default"]
+    nature:
+      ratio: "16:12"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+class: center, middle, inverse
+
+# Sobre a disciplina
+
+---
+
+## O que estamos fazendo aqui?
+
+A jurimetria é a estatística aplicada ao direito. 
+
+Mas se faz jurimetria na prática? Neste semestre, tentaremos responder a essa pergunta. 
+
+Nossa jornada começa com as definições básicas de jurimetria e, através de diversos exemplos, discutiremos todos os aspectos de pesquisa científica e estatística envolvidos.
+
+Ao final das aulas, você seja capaz de construir boas perguntas de pesquisa, planejar um estudo jurimétrico e desenhar o passo-a-passo para realizá-lo na prática. 
+
+Não teremos aulas de programação e aspectos matemáticos/estatísticos serão discutidos de forma intuitiva.
+
+---
+
+## Por onde vamos?
+
+Jurimetria não é software, é processo. Vamos aprender como esse processo funciona e quais aspectos devemos levar em conta em cada estudo.
+
+<center>
+<img src = "img/ml-jurimetria.png" width="100%">
+</center>   
+
+---
+
+## O que faremos?
+
+<center>
+
+<br>
+
+Nosso livro será construído ao longo das aulas:
+
+<br>
+
+<a href='https://livro.ndtj.com.br/'>https://livro.ndtj.com.br/</a>
+
+<br>
+<br>
+
+Também faremos novos artigos para o __Lab da ABJ__: 
+
+<br>
+
+<a href='https://lab.abj.org.br'>https://lab.abj.org.br</a>
+
+</center>
+
+<a href="https://lab.abj.org.br/posts/2021-01-15-litigiosidade/">
+<img src="img/lit-idhm-estado-1.png" style="position: fixed; bottom: 80px; left: 100px" width = 340px height = 260px></img>
+</a>
+
+<a href="https://lab.abj.org.br/posts/2020-12-09-covid/">
+<img src="img/fig-semana-1.png" style="position: fixed; bottom: 80px; left: 480px" width = 340px height = 260px></img>
+</a>
+
+---
+
+## De quais fontes beberemos?
+
+- Livro [Jurimetria:  Como a Estatística pode reinventar o direito](https://www.amazon.com.br/Jurimetria-Marcelo-Guedes-Nunes/dp/8553219992/), de Marcelo Guedes Nunes.
+
+```{r, echo=FALSE, fig.align="center", out.width="25%"}
+knitr::include_graphics("img/livro_mgn.jpg")
+```
+
+- Livro de [Introdução à Jurimetria com o R](https://jurimetria.consudata.com.br/notes/index.html), de José de Jesus Filho.
+
+- [Cases da ABJ](https://abj.org.br/cases/).
+
+---
+
+## Dinâmica das aulas
+
+- Vários exemplos por aula
+  - Estudos da ABJ e projetos de consultoria.
+  - Você terá de fazer a **leitura prévia** do estudo discutido em cada aula.
+  - Faremos resumos dos estudos para colocar em nosso livro.
+
+- Diversos quizzes a serem resolvidos sala de aula.
+
+- Uma prova escrita.
+
+- Um trabalho final, a ser entregue na forma de relatório e seminário.
+  - Os melhores trabalhos serão colocados no [Lab da ABJ](https://lab.abj.org.br).
+
+---
+
+## Trabalho final
+
+- Para o trabalho final, vocês se organizarão em grupos e definirão um tema de pesquisa.
+
+- O tema poderá ser relacionado a alguma disciplina que você está cursando, por exemplo, ou algum tema de seu interesse.
+
+- Vamos desenvolver um estudo jurimétrico simples sobre esse tema.
+
+- Mais detalhes, restrições e opções serão passados na __terceira__ aula.
+
+---
+
+## Composição da nota final:
+
+- __Prova__: 60%
+- __Trabalho final__: 40%
+
+--
+
+.pull-left[
+
+Daremos 0,5 __adicional__ para quem resolver todos os quizzes dados em aula.
+
+]
+
+.pull-right[
+
+Daremos 0,5 __adicional__ para quem entregar 2 resumos ou mais.
+
+]
+
+---
+
+## Dúvidas
+
+- Mande dúvidas e comentários no chat em qualquer momento.
+
+- Para falar, levante a mão.
+
+- Algumas dúvidas serão respondidas na hora. Outras serão respondidas mais tarde na própria aula ou em aulas futuras.
+
+- Só interrompa quem estiver falando em caso de emergência.
+
+---
+class: middle, center, inverse
+
+# Como estudar?
+
+---
+
+# Pratique
+
+- Não se preocupe com estilos de estudo. Use o que te deixar mais confortável.
+
+- Estude um pouco todo dia. Se você tem apenas uma hora para estudar na semana, faça 3 sessões de 20 minutos em dias diferentes.
+
+- Se teste! Coloque em prática o que você aprendeu desenvolvendo novos estudos jurimétricos.
+
+---
+
+# Tire suas dúvidas
+
+- **Não existe dúvida idiota**.
+
+- Fora do horário de aula:
+- Perguntas __sobre a disciplina__: envie suas no Teams.
+- Perguntas __sobre jurimetria, estatística e programação__: envie preferencialmente no [Fórum da ABJ](https://forum.abj.org.br).
+- Coloque a tag "ndtj"
+
+### Por que usar o Fórum?
+
+- Muito melhor para escrever textos que possuem códigos.
+
+- Mais pessoas acompanhando e respondendo as dúvidas.
+
+- Em um ambiente aberto, as suas dúvidas vão contribuir com a comunidade.
+
+---
+
+class: center, middle
