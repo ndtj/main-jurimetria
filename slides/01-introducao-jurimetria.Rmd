@@ -275,3 +275,17 @@ __Resultado__: Pesquisas do Núcleo de Estudo e Pesquisa sobre Insolvência (NEP
 --
 
 ### A jurimetria pode ser utilizada para elaborar boas políticas públicas, estudos acadêmicos e estratégias advocatícias
+
+
+---
+class: center, middle, inverse
+
+# Extra
+
+---
+class: middle, center
+
+## Jurimetria e inteligência artificial
+
+### [Vamos ao fórum!](https://forum.abj.org.br/t/jurimetria-e-inteligencia-artificial/37)
+
