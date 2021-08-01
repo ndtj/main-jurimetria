@@ -188,4 +188,97 @@ class: middle, center, inverse
 
 ---
 
-class: center, middle
+class: middle, inverse, center
+
+# Informações adicionais
+
+---
+class: middle
+
+## Entidades
+
+.pull-left[
+
+```{r, echo=FALSE, fig.align="center", out.width="80%"}
+knitr::include_graphics("https://ndtj.com.br/img/logo.png")
+```
+
+[Núcleo de Direito, Tecnologia e Jurimetria /  PUC-SP](https://ndtj.com.br)
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, fig.align="center", out.width="80%"}
+knitr::include_graphics("https://abj.org.br/assets/logo-home.png")
+```
+
+[Associação Brasileira de Jurimetria](https://abj.org.br)
+
+]
+
+---
+
+## Alunos - idades
+
+```{r idades-alunos, echo=FALSE, message=FALSE, warning=FALSE, fig.width=7, fig.height=5, dpi=300}
+alunosPuc::alunos |>
+  dplyr::mutate(
+    idade = floor(as.numeric(Sys.Date() - dt_nasc)/365.25),
+    idade = cut(idade, c(20, 25, 30, 35, 40), include.lowest = TRUE)
+  ) |>
+  dplyr::count(turno, idade) |>
+  ggplot2::ggplot(ggplot2::aes(x = idade, y = n, fill = turno)) +
+  ggplot2::geom_col(
+    position = ggplot2::position_dodge2(preserve = "single")
+  ) +
+  ggplot2::scale_fill_viridis_d(begin = .3, end = .7, option = "A") +
+  ggplot2::scale_y_continuous(breaks = c(0:12)*2) +
+  ggplot2::theme_minimal(14) +
+  ggplot2::labs(
+    x = "Idade", y = "Quantidade", fill = "Turma",
+  ) +
+  ggplot2::theme(legend.position = c(.8,.8))
+
+```
+
+---
+
+## Alunos - semestre
+
+Diurno
+
+```{r, echo=FALSE}
+tabelas <- alunosPuc::alunos |>
+  tidyr::unnest(disciplinas) |>
+  dplyr::filter(stringr::str_detect(nm_disciplina, "DIREITO CIVIL")) |>
+  dplyr::distinct(id_matricula, .keep_all = TRUE) |> 
+  tibble::add_row(turno = "noturno", nm_disciplina = "Nenhuma") |> 
+  dplyr::mutate(
+    roman = stringr::str_extract(nm_disciplina, "[IVX]+$"),
+    roman = utils::as.roman(roman),
+    semestre = as.numeric(roman)
+  ) |> 
+  dplyr::count(turno, nm_disciplina, semestre, sort = TRUE) |>
+  dplyr::arrange(turno, dplyr::desc(semestre)) |>
+  dplyr::group_by(turno) |>
+  dplyr::mutate(prop = formattable::percent(n/sum(n), digits = 1)) |>
+  dplyr::ungroup() |> 
+  purrr::set_names(
+    c("Turma", "Direito Civil", "Semestre esperado", "N", "%")
+  ) |> 
+  dplyr::group_split(Turma, .keep = FALSE) |> 
+  purrr::map(janitor::adorn_totals) |> 
+  # purrr::map(dplyr::mutate, `%` = scales::percent(`%`, .1))
+  purrr::map(knitr::kable)
+
+
+tabelas[[1]]
+```
+
+Noturno
+
+```{r, echo=FALSE}
+tabelas[[2]]
+```
+
