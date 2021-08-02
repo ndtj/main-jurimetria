@@ -113,7 +113,7 @@ knitr::include_graphics("img/livro_mgn.jpg")
 - Vamos desenvolver um estudo jurimétrico simples sobre o tema escolhido.
 
 Entregas:
-  - No primeiro bimestre, a entrega será um documento planejando a pesquisa.
+  - No primeiro bimestre, a entrega será um documento planejando a pesquisa e uma apresentação.
   - No segundo bimestre, a entrega será um documento e uma apresentação.
 
 - Mais detalhes, restrições e opções serão passados na __terceira__ aula.
@@ -122,9 +122,8 @@ Entregas:
 
 ## Composição da nota final:
 
-- __Seminário__: 
-    - Primeiro bimestre: 40%
-    - Segundo bimestre: 60%
+- __Seminário__: 30%
+- __Prova__ (na forma de trabalho): 70%
 
 --
 
