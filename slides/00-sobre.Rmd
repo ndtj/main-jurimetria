@@ -102,7 +102,7 @@ knitr::include_graphics("img/livro_mgn.jpg")
 
 ---
 
-## Dinâmica das aulas
+## Dinâmica das aulas (2)
 
 - Vários exemplos por aula
   - Estudos da ABJ e projetos de consultoria.
