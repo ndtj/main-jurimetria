@@ -27,6 +27,26 @@ xaringanExtra::use_panelset()
 ```
 
 
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Case 01: Câmaras criminais",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "gadenbuie/drake-intro") %>% 
+  meta_social(
+    title = "Introdução à Jurimetria",
+    url = "https://ndtj.github.io/main-jurimetria/slides/01-introducao-jurimetria.html#1",
+    image = "https://ndtj.com.br/img/logo.png",
+    image_alt = "Logo do NDTJ.",
+    og_type = "website",
+    og_author = "Julio Trecenti",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@jtrecenti"
+  )
+```
+
 # Objetivos de aprendizagem de hoje
 
 #### Compreender o case das __câmaras criminais__.

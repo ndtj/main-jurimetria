@@ -10,7 +10,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-knit: pagedown::chrome_print
+# knit: pagedown::chrome_print
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +31,27 @@ crop <- function(im, left = 0, top = 0, right = 0, bottom = 0) {
   magick::image_crop(im, glue::glue("{w-left-right}x{h-top-bottom}+{left}+{top}"))
 }
 
+```
+
+
+```{r}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Introdução à Jurimetria",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "gadenbuie/drake-intro") %>% 
+  meta_social(
+    title = "Introdução à Jurimetria",
+    url = "https://ndtj.github.io/main-jurimetria/slides/01-introducao-jurimetria.html#1",
+    image = "https://ndtj.com.br/img/logo.png",
+    image_alt = "Logo do NDTJ.",
+    og_type = "website",
+    og_author = "Julio Trecenti",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@jtrecenti"
+  )
 ```
 
 ## Objetivos da aula
