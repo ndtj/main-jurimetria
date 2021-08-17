@@ -476,11 +476,13 @@ Um gráfico ruim geralmente possui uma das seguintes características:
 
 ---
 
-# Quiz 1
+# Quiz
 
 ```{r, out.width="40%"}
 knitr::include_graphics("img/cat.gif")
 ```
+
+## https://forms.office.com/r/7ATXi2Y3sK
 
 ---
 class: inverse, center, middle
