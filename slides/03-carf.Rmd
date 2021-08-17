@@ -1,5 +1,5 @@
 ---
-title: "Case: Conselho Adminsitrativo de Recursos Fiscais (CARF)"
+title: "Case: Conselho Administrativo de Recursos Fiscais (CARF)"
 subtitle: "<hr/>"
 output:
   xaringan::moon_reader:
@@ -28,6 +28,10 @@ xaringanExtra::use_panelset()
 
 carfn <- carf |> 
   dplyr::count(autor, vencedor) |> 
+  dplyr::mutate(autor = dplyr::case_when(
+    autor == "Fisco" ~ "Ofício",
+    TRUE ~ "Voluntário"
+  )) |> 
   dplyr::group_by(autor) |> 
   dplyr::mutate(prop = n/sum(n)) |> 
   dplyr::ungroup() |> 
