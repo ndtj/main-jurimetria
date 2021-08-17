@@ -71,6 +71,10 @@ meta() %>%
 
 --
 
+#### Compreender aspectos introdutórios sobre visualização de dados
+
+--
+
 #### Compreender a diferença entre dados públicos e dados abertos
 
 ---
