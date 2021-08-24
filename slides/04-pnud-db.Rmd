@@ -11,7 +11,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-# knit: pagedown::chrome_print
+knit: pagedown::chrome_print
 ---
 
 ```{r setup, include=FALSE}
@@ -140,7 +140,7 @@ __Objetivos__:
 
 __Recorte temporal__: processos distribuídos entre 2013 e 2019.
 
-__Recorte regional__: comarca da capital, foro central cíel.
+__Recorte regional__: comarca da capital, foro central cível.
 
 __Recorte de escopo__: [diversas variáveis](https://abj.org.br/pdf/abj_pnud_db.pdf) relacionadas ao *case* do Doing Business.
 
@@ -325,17 +325,7 @@ class: stats
 
 - Estudos __prospectivos__ listam processos a partir do nascimento. Estudos __retrospectivos__ listam processos a partir da morte.
 
-- Análise de __sobrevência__ é uma técnica útil para análise de tempos em estudos prospectivos.
-
----
-
-# Quiz
-
-```{r, out.width="40%"}
-knitr::include_graphics("img/cat.gif")
-```
-
-## https://forms.office.com/r/GKGNgMhexd
+- Análise de __sobrevivência__ é uma técnica útil para análise de tempos em estudos prospectivos.
 
 ---
 class: case
@@ -373,6 +363,16 @@ class: case
 - Peticionamento eletrônico
 
 Veja o relatório para acessar fundamentação e discussões.
+
+---
+
+# Quiz
+
+```{r, out.width="40%"}
+knitr::include_graphics("img/cat.gif")
+```
+
+## https://forms.office.com/r/GKGNgMhexd
 
 ---
 class: center, middle, inverse
