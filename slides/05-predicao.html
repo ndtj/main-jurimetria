@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Case 04: Modelos preditivos</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <meta name="description" content="Case 04: Modelos preditivos"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="ndtj/main-jurimetria"/>
+    <meta name="twitter:title" content="Introdução à Jurimetria"/>
+    <meta name="twitter:description" content="Case 04: Modelos preditivos"/>
+    <meta name="twitter:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta name="twitter:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta name="twitter:image:alt" content="Logo do NDTJ."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@jtrecenti"/>
+    <meta name="twitter:site" content="@jtrecenti"/>
+    <meta property="og:title" content="Introdução à Jurimetria"/>
+    <meta property="og:description" content="Case 04: Modelos preditivos"/>
+    <meta property="og:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta property="og:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta property="og:image:alt" content="Logo do NDTJ."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Julio Trecenti"/>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Case 04: Modelos preditivos
+## <hr/>
+
+---
+
+
+
+
+
+
+
+# Objetivos de aprendizagem de hoje
+
+#### Contextualizar sobre a aplicação de jurimetria em empresas
+
+#### Conhecer como funcionam e para que servem modelos preditivos
+
+#### Conhecer o funcionamento geral de dashboards
+
+---
+class: middle
+
+# Guia para os slides
+
+#### Slides sobre o case: __&lt;span style="color:#3B0F70;"&gt;marca azul&lt;/span&gt;__
+
+#### Slides sobre pesquisa/ciência: __&lt;span style="color:#7AD151;"&gt;marca verde&lt;/span&gt;__
+
+#### Slides sobre estatística: __&lt;span style="color:#DE4968;"&gt;marca rosa&lt;/span&gt;__
+
+---
+class: jurimetrics
+
+# Lawtechs
+
+- [AB2L](https://ab2l.org.br/radar-lawtechs/) surgiu em 2016
+- Brasil apresenta um dos maiores mercados mercados
+
+&lt;img src="img/lawtechs.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: jurimetrics
+
+# Ciclo de maturidade de dados
+
+&lt;img src="img/maturidade-dados.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+class: jurimetrics
+
+# Cenário atual
+
+- Por conta da dificuldade de acesso aos dados, ainda existe oportunidade para empresas especializadas em __extração de dados__.
+
+- A maior parte das aplicações que vimos hoje são relacionadas a __visualização de dados__, com algumas aplicações pontuais de __modelagem__.
+
+--
+
+- A tomada de __decisão baseada em dados__ ainda é bastante incipente no mercado atual (mesmo que as empresas não falem isso explicitamente).
+
+&gt; Fake it until you make it.
+&gt; 
+&gt; Simon &amp; Garfunkel (?)
+
+---
+class: jurimetrics
+
+&lt;img src="img/jurimetria_empresas.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# Sobre o case
+
+__Objetivos__: Visualização e modelagem de dados a partir de uma base de uma lista de processos enviada pela Vivo.
+
+__Recorte temporal__: processos distribuídos entre 2009 e 2019.
+
+__Recorte regional__: Processos distribuídos em 6 comarcas distintas: Fernandópolis, Jales, Palmeira D'Oeste, Presidente Prudente, Santa Fé do Sul e São José do Rio Preto.
+
+__Recorte de escopo__: Processos relacionados a direito do consumidor com a Vivo no polo passivo.
+
+---
+class: stats
+
+# Ciclo da ciência de dados
+
+&lt;img src="img/ciclo-ciencia-de-dados.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: stats
+
+# O Dashboard
+
+&lt;img src="img/vivopoc.gif" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: stats
+
+# Modelagem preditiva
+
+- Área da estatística destinada à construção de __modelos estatísticos__ capazes de fornecer boas predições para determinado fenômeno.
+
+- Melhor introdução para o tema: [ISLR](https://www.statlearning.com)
+
+&lt;img src="img/islr.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+- __Machine learning__ e __statistical learning__ são __sinônimos__.
+
+---
+class: stats
+
+# O que é um modelo preditivo?
+
+Paradigma programação vs paradigma do aprendizado estatístico.
+
+.pull-left[
+
+&lt;img src="img/ia_esquerda.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right[
+
+&lt;img src="img/ia_direita.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+class: stats
+
+# Mas e as redes neurais?
+
+- Redes neurais / deep learning é uma área de aprendizado de máquinas (aprendizado estatístico).
+
+&lt;img src="img/artificial-intelligence.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+class: stats
+
+# Mas e a inteligência artificial?!
+
+&lt;img src="img/ml-stats.jpeg" width="60%" style="display: block; margin: auto;" /&gt;
+
+A inteligência artificial *está* machine learning nos dias de hoje.
+
+---
+class: stats
+
+# A única fórmula que você verá aqui
+
+- Nós temos inputs e outputs, e queremos predizer um output que ainda não existe a patir de um input que temos em mãos.
+
+- Por exemplo, queremos predizer o resultado de um processo (output) com base nas suas características (input).
+
+- Geralmente associamos os inputs à variável `\(X\)` e os outputs à variável `\(Y\)`.
+
+- Queremos criar uma função (uma fórmula) `\(g\)` que, a partir de um `\(X\)`, consegue dar um valor de `\(Y\)`
+
+`$$Y = g(X)$$`
+
+---
+class: stats
+
+# Sobreajuste
+
+Para isso, podemos aplicar um modelo super complexo, que se ajusta perfeitamente aos dados que eu observo, como se cada caso fosse um caso...
+
+&lt;img src="img/overfiting_sem_teste.gif" width="80%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Curso-R](https://curso-r.com)
+
+---
+class: stats
+
+# Erro de generalização
+
+- Um modelo de aprendizado estatístico precisa funcionar bem para bases que nós __não observamos__. Para isso, tentamos criar um modelo que se adeque bem aos dados que observamos.
+
+&lt;img src="img/alvo.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: stats
+
+# Sobreajuste
+
+... mas quando eu vou aplicar isso no mundo real, os modelos mais complicados não se aplicam.
+
+&lt;img src="img/overfiting_sem_teste.gif" width="80%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Curso-R](https://curso-r.com)
+
+---
+class: stats
+
+# Sobreajuste
+
+No fundo, preciso escolher um modelo que seja suficientemente complexo para captar o __sinal__ (tendência) do fenômeno estudado, sem com isso fazer com que meu modelo seja suscetível a __ruídos__ (erros aleatórios),
+
+&lt;img src="img/overfiting_scatter_eqm.gif" width="90%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Curso-R](https://curso-r.com)
+
+---
+class: stats
+
+# Treino e teste
+
+- Para lidar com esse problema, separamos nossa base em duas: uma base de __treino__ e uma base de __teste__. 
+
+- Na base de treino, ajustamos nosso modelo. Na base de teste, testamos o quão bom está o modelo. Dessa forma, não tem como sermos enganados pelo sobreajuste.
+
+- A base de treino, por sua vez, passa por um procedimento chamado __validação cruzada__, que consiste em testar vários modelos escondendo uma parte da base de treino e testando os melhores candidatos.
+
+---
+class: jurimetrics
+
+# Métricas de qualidade de um modelo
+
+- Nem sempre o melhor modelo é aquele que acerta mais!
+
+- A métrica depende do problema estatístico (regressão, classificação) e do __problema de negócio__.
+
+- __Exemplo__: acurácia, falso positivo e falso negativo
+
+&lt;img src="img/types-error.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Machine learning Model Performace Metrics](https://medium.com/nerd-for-tech/machine-learning-model-performance-metrics-84f94d39a92)
+
+---
+class: case
+
+# Voltando ao case
+
+&lt;img src="img/diagnostico.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+- Acurácia do modelo: 88%. É bom?
+
+- Precisão do modelo: 89%.
+
+---
+class: case
+
+# Aprendizado estatístico interpretável
+
+Art. 20 da LGPD: 
+
+&gt; § 1º O controlador deverá fornecer, sempre que solicitadas, informações claras e adequadas a respeito dos critérios e dos procedimentos utilizados para a decisão automatizada, observados os segredos comercial e industrial.
+
+
+- Conforme obtemos mais dados, conseguimos ajustar modelos cada vez mais complexos.
+
+- Modelos mais complexos são mais difíceis de interpretar: não tem só um `\(X\)` para explicar o `\(Y\)`, e as funções `\(g\)` podem ser bem complicadas de ler por seres humanos.
+
+---
+class: case
+
+# Machine Leaning Interpretável
+
+Uma das áreas de pesquisa que mais cresce na atualidade é a de intepretação de modelos. O problema de *fairness* é igualmente relevante, e também é levada em conta na área de interpretabilidade.
+
+Livro: [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/).
+
+&lt;img src="img/iml.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Resumo
+
+- Aprendizado de máquinas é o mesmo que __aprendizado estatístico__, e inteligência artificial é uma área do conhecimento que contém como área mais importante (atualmente) o aprendizado de máquinas.
+
+- Modelos preditivos buscam minimizar o erro de generalização. Para isso, precisamos separar a base entre __treino__ e __teste__.
+
+- Um modelo pode otimizar __métricas diferentes__, e essas métricas dependem do modelo de negócio.
+
+---
+
+# Quiz
+
+&lt;img src="img/cat.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+## https://forms.office.com/r/dYnft5E4Nf
+
+---
+class: center, middle, inverse
+
+# Obrigado!
+
+### [Julio Trecenti](mailto:jaztrecenti@pucsp.br)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"mathjax": "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML",
+"ratio": "16:12",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
