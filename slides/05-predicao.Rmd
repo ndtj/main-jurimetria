@@ -253,7 +253,7 @@ class: stats
 ... mas quando eu vou aplicar isso no mundo real, os modelos mais complicados não se aplicam.
 
 ```{r, out.width="80%"}
-knitr::include_graphics("img/overfiting_sem_teste.gif")
+knitr::include_graphics("img/overfiting_com_teste.gif")
 ```
 
 Fonte: [Curso-R](https://curso-r.com)
