@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Case 07: Observatórios</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <meta name="description" content="Case 05: Adoção"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="ndtj/main-jurimetria"/>
+    <meta name="twitter:title" content="Introdução à Jurimetria"/>
+    <meta name="twitter:description" content="Case 05: Adoção"/>
+    <meta name="twitter:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta name="twitter:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta name="twitter:image:alt" content="Logo do NDTJ."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@jtrecenti"/>
+    <meta name="twitter:site" content="@jtrecenti"/>
+    <meta property="og:title" content="Introdução à Jurimetria"/>
+    <meta property="og:description" content="Case 05: Adoção"/>
+    <meta property="og:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta property="og:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta property="og:image:alt" content="Logo do NDTJ."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Julio Trecenti"/>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Case 07: Observatórios
+## <hr/>
+
+---
+
+
+
+
+
+
+
+# Objetivos de aprendizagem de hoje
+
+#### Conhecer os observatórios da ABJ
+
+#### Compreender sobre classificação manual de processos
+
+#### Compreender sobre análise de inconsistências
+
+---
+class: middle
+
+# Guia para os slides
+
+#### Slides sobre o case: __&lt;span style="color:#3B0F70;"&gt;marca azul&lt;/span&gt;__
+
+#### Slides sobre pesquisa/ciência: __&lt;span style="color:#7AD151;"&gt;marca verde&lt;/span&gt;__
+
+#### Slides sobre estatística: __&lt;span style="color:#DE4968;"&gt;marca rosa&lt;/span&gt;__
+
+---
+class: jurimetrics
+
+# Introdução
+
+- Os observatórios da ABJ são estudos que analisam e monitoram processos complexos utilizando jurimetria.
+
+- O objetivo principal dos projetos é esclarecer assuntos complexos e relevantes do Direito, com o intuito de formular melhores políticas públicas.
+
+- Todos os relatórios dos observatórios são disponibilizados publicamente.
+
+---
+class: jurimetrics
+
+# Metodologia
+
+1. Formulação de hipóteses, questões norteadoras e plano de execução.
+
+1. Listagem de processos e obtenção da população de casos a serem analisados.
+
+1. Elaboração e validação do questionário, através de aplicação de pré-teste.
+
+1. Coleta e organização dos dados.
+
+1. Análise dos dados obtidos e elaboração do relatório de análise.
+
+
+---
+class: jurimetrics
+
+# Fluxo de trabalho
+
+- Geralmente, os Observatórios são iniciados a partir da identificação de um tema interessante de análise. 
+
+- Em seguida, especialistas no tema formulam hipóteses que levam às questões norteadoras da pesquisa. 
+
+- Essas questões são organizadas em um documento contendo o plano de execução, que é passado para instituições apoiadoras em busca de recursos. 
+
+- Após o levantamento dos recursos necessários, damos início ao cronograma de execução do projeto.
+
+---
+class: case
+
+# Insolvência - Recuperações judiciais
+
+&lt;img src="https://abj.org.br/img/cases/obsfase2.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# Insolvência - Falências
+
+&lt;img src="https://abjur.github.io/obsFase3/relatorio/assets/img/diag-tempos.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# Mercado de Capitais
+
+&lt;img src="https://abj.org.br/img/cases/cvm.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+class: stats
+
+# Automação
+
+- Leitura, filtros, seleções
+
+- Detecção das inconsistências
+
+- Construção da base de dados arrumada
+
+---
+class: stats
+
+# O que é faxina?
+
+**Faxina de dados** é o processo de modificar uma ou mais tabelas até que elas atendam o princípio **tidy**, proposto por Hadley Wickham em um artigo de 2014.
+
+Cada base exigirá uma **Faxina** diferente, pois não existe um único tipo de bagunça:
+
+_Tidy data ~~Happy families~~ are all alike; every untidy data ~~unhappy family~~ is untidy ~~unhappy~~ in its own way (Hadley Wickham ~~Leon Tolstoi~~)_
+
+[Material do curso de faxina de dados](https://curso-r.github.io/202110-faxina/).
+
+---
+class: stats
+
+# Por que faxina é importante?
+
+Dados são o subproduto de muitos __processos complexos__, administrado por várias pessoas que podem fazer __usos diferentes__ dos mesmos registros.
+
+Isso faz com que os __formatos__ e __convenções__ de armazenamento de dados sejam muito __variados__, dificultando análises futuras.
+
+Por isso, a Faxina é praticamente uma __constante__ em qualquer contexto de análise de dados, e isso não se deve **só** a erros ou falhas no processo de armazenamento. 
+
+---
+class: stats
+
+# O que é um banco de dados **arrumado**
+
+ *Tidy data* é um princípio para arrumação de base de dados que resolve 90% dos problemas reais. Uma base tidy é **uma única tabela** que satisfaz:
+ 
+- Cada observação é uma (e só uma) linha da tabela.
+
+- Cada variável é uma coluna da tabela. Não existe uma coluna que represente duas variáveis, por exemplo. 
+
+Essas definições são relacionadas, a depender do que entendermos por **variável** e **observação**. O que realmente importa é a filosofia por trás das sugestões.
+
+---
+class: case
+
+# ObsDash
+
+&lt;img src="img/obsdash.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# ObsDash
+
+- Serve para acompanhar as inconsistências dos dados
+
+- Corrigimos as informações na fonte de dados, que alimentam os trabalhos.
+
+---
+
+# Quiz
+
+&lt;img src="img/cat.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+## https://forms.office.com/r/RHkA3VRkrE
+
+---
+class: center, middle, inverse
+
+# Obrigado!
+
+### [Julio Trecenti](mailto:jaztrecenti@pucsp.br)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"mathjax": "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML",
+"ratio": "16:12",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
