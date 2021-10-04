@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Case 08: Provisionamento e Estratégia de acordo</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <meta name="description" content="Case 08: Provisionamento e estratégia de acordo"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="ndtj/main-jurimetria"/>
+    <meta name="twitter:title" content="Introdução à Jurimetria"/>
+    <meta name="twitter:description" content="Case 08: Provisionamento e estratégia de acordo"/>
+    <meta name="twitter:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta name="twitter:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta name="twitter:image:alt" content="Logo do NDTJ."/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@jtrecenti"/>
+    <meta name="twitter:site" content="@jtrecenti"/>
+    <meta property="og:title" content="Introdução à Jurimetria"/>
+    <meta property="og:description" content="Case 08: Provisionamento e estratégia de acordo"/>
+    <meta property="og:url" content="https://ndtj.github.io/main-jurimetria"/>
+    <meta property="og:image" content="https://ndtj.com.br/img/logo.png"/>
+    <meta property="og:image:alt" content="Logo do NDTJ."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Julio Trecenti"/>
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom-css.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Case 08: Provisionamento e Estratégia de acordo
+## <hr/>
+
+---
+
+
+
+
+
+
+
+# Objetivos de aprendizagem de hoje
+
+### Compreender o funcionamento do provisionamento
+
+### Compreender o conceito de esperança matemática
+
+### Compreender a mecânica em estratégias de acordo
+
+---
+class: middle
+
+# Guia para os slides
+
+#### Slides sobre o case: __&lt;span style="color:#3B0F70;"&gt;marca azul&lt;/span&gt;__
+
+#### Slides sobre pesquisa/ciência: __&lt;span style="color:#7AD151;"&gt;marca verde&lt;/span&gt;__
+
+#### Slides sobre estatística: __&lt;span style="color:#DE4968;"&gt;marca rosa&lt;/span&gt;__
+
+---
+class: jurimetrics, middle
+
+# Introdução
+
+O [__CPC 25__](http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56) tem como objetivo definir critérios de reconhecimento e bases de mensuração apropriados a provisões e passivos e ativos contingentes.
+
+---
+class: jurimetrics
+
+# Provisão
+
+.pull-left[
+
+- __Provisão__ é um passivo de __prazo__ ou de __valor__ __incertos__, ou seja, que há incerteza sobre o prazo ou o valor de desembolso futuro para a sua liquidação.
+
+- Provisões  são reconhecidas como passivos pois são __obrigações presentes__ e é provável que uma __saída de recursos__ para liquidar a obrigação.
+
+]
+
+
+.pull-right[
+
+- __Passivos contingentes__ não são reconhecidos como passivos, pois são __obrigações possíveis__, visto que ainda há de ser confirmado se a entidade tem ou não uma obrigação presente.
+
+- A menos que seja __remota__ a possibilidade de ocorrer qualquer desembolso na liquidação, a entidade deve divulgar na data do balanço uma breve descrição da natureza do passivo contingente.
+
+]
+
+---
+class: jurimetrics
+
+# Fluxo de provisão
+
+&lt;img src="img/provisionamento-fluxo.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+class: jurimetrics
+
+# Mensuração
+
+.pull-left[
+
+- O valor exigido como provisão deve ser a __melhor estimativa__ do desembolso exigido para liquidar a obrigação presente na data do balanço.
+
+- A melhor estimativa do desembolso exigido para liquidar a obrigação presente é o __valor que a entidade racionalmente pagaria__ para liquidar a obrigação.
+
+- A estimativa do desfecho e do efeito financeiro são determinadas pelo __julgamento da administração__ da entidade, complementados pela experiência em __transações semelhantes__.
+
+]
+
+.pull-right[
+
+- Quando a provisão a ser mensurada envolve uma grande população de itens, a obrigação deve ser estimada ponderando-se todos os possíveis desfechos pelas suas probabilidades associadas (__valor esperado__).
+
+- Quando uma única obrigação estiver sendo mensurada, o desfecho individual mais provável pode ser a melhor estimativa do passivo. 
+
+]
+
+---
+class: case
+
+# Case: GPA (2016)
+
+&lt;iframe src="https://prezi.com/embed/-2qilod8kmz5/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="480" width="960"&gt;&lt;/iframe&gt;
+
+---
+class: stats
+
+# O que é valor esperado?
+
+- O valor esperado é a média de uma variável aleatória
+
+- Essa média é calculada __ponderando__ cada valor possível da variável aleatória __probabilidade__ desse valor ocorrer
+
+.pull-left[
+
+`$$E[X] = \mathbb \sum x P(X=x)$$`
+
+]
+
+.pull-right[
+
+`$$E[X] = \int x f(x) dx$$`
+
+]
+
+---
+class: case
+
+# Problema
+
+Problema: Uma grande empresa de logística estava com problemas em sua estratégia de
+provisionamento e procurou a Terranova para ajudá-los.
+
+&lt;img src="img/volume-no-tempo.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# Solução
+
+A solução proposta teve como objetivo criar alternativas para a estratégia de provisionamento da empresa, de forma a melhorar a acurácia na relação entre o que foi previsto e o que foi efetivamente pago pela companhia, além de aumentar a transparência e auditabilidade na metodologia utilizada.
+
+---
+class: case
+
+# Resultados
+
+&lt;img src="img/resultados-empresa.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: case
+
+# Entregas
+
+- Relatório técnico, contendo uma análise do desempenho das provisões realizadas até o momento, estimativas do desembolso em processos trabalhistas ao longo do tempo e estimativas do potencial de redução na provisão, caso exista.
+
+- Terravista, com os módulos Panorama Geral, Inconsistências e Análise de Risco.
+
+- Implementação da nova estratégia de provisionamento baseada na análise estatística de dados.
+
+---
+class: jurimetrics
+
+# Estratégia de acordo
+
+&lt;img src="img/acordos1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: jurimetrics
+
+# Estratégia de acordo
+
+&lt;img src="img/acordos2.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+class: jurimetrics
+
+# Estratégia de acordo
+
+&lt;img src="img/acordos-app.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Quiz
+
+&lt;img src="img/cat.gif" width="40%" style="display: block; margin: auto;" /&gt;
+
+## https://forms.office.com/r/ALf5ijE7ti
+
+---
+class: center, middle, inverse
+
+# Obrigado!
+
+### [Julio Trecenti](mailto:jaztrecenti@pucsp.br)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"mathjax": "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML",
+"ratio": "16:12",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
